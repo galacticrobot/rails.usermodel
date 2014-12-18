@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
             flash[:notice] = "Välkommen. Du är nu inloggad!"
             redirect_to root_path
         else
-            flash.now.alert = "Felaktig e-postadress eller lösenord"
+            flash.now[:notice] = "Felaktig e-postadress eller lösenord"
             render 'new'
         end
     end

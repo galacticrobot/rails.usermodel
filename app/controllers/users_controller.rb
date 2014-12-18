@@ -1,6 +1,9 @@
 class UsersController < ApplicationController
 
-    before_action :user_logged_in!
+    before_action :user_logged_in!, except: [:index, :show]
+
+    def index
+    end
 
     def new
         @user = User.new
